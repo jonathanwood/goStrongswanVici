@@ -43,7 +43,7 @@ func NewClientConn(conn net.Conn) (client *ClientConn) {
 
 // it dial from unix:///var/run/charon.vici
 func NewClientConnFromDefaultSocket() (client *ClientConn, err error) {
-	conn, err := net.Dial("unix", "/var/run/charon.vici")
+	conn, err := net.Dial("unix", "/vici/charon.vici")
 	if err != nil {
 		return
 	}
